@@ -437,6 +437,7 @@ img {
   padding-left: 32px;
   padding-right: 32px;
   margin-top: 16px;
+
 }
 
 .action .link-item {
@@ -446,6 +447,7 @@ img {
   width: 44px;
   height: 44px;
   fill: var(--icon-main-fell);
+  /* background-color: var(--primary-white-color); */
 }
 
 .action .link-item:hover,
