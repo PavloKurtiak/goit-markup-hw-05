@@ -124,6 +124,7 @@ img {
 /* шапка */
 
 .site-nav-list .item {
+  position: relative;
   padding-top: 32px;
   padding-bottom: 32px;
   text-align: center;
@@ -133,8 +134,20 @@ img {
   margin-right: 50px;
 }
 
+
+
 .site-nav .link.current {
   color: var(--accent-color);
+}
+
+.site-nav .link.current::after {
+    position: absolute;
+  content: '';
+  width: 100%;
+  left: 0;
+  bottom: 0;
+border: 2px solid var(--accent-color);
+border-radius: 2px;
 }
 
 .logo {
