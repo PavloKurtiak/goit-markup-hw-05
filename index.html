@@ -63,7 +63,7 @@
             ЭФФЕКТИВНЫЕ РЕШЕНИЯ ДЛЯ ВАШЕГО БИЗНЕСА
           </h1>
 
-          <button class="margin-auto button hero-button" type="button">
+          <button class="margin-auto button hero-button" type="button" data-modal-open>
             Заказать услугу
           </button>
         </div>
@@ -71,7 +71,9 @@
       <!--преимущеста-->
       <section class="section no-padding advantages">
         <div class="container">
-          <h2 class="hidden-title" aria-label="Преимущества работы с нами">Преимущества работы с нами</h2>
+          <h2 class="hidden-title" aria-label="Преимущества работы с нами">
+            Преимущества работы с нами
+          </h2>
           <ul class="flexbox advantages-list list">
             <li class="item icon-warning">
               <div class="block">
@@ -130,28 +132,45 @@
           <h2 class="title">Чем мы занимаемся</h2>
           <ul class="flexbox work-list list">
             <li class="item">
-              <img
-                src="./images/5.jpg"
-                width="370"
-                height="294"
-                alt="Планшет и руки на клавиатуре"
-              />
+              <div class="position-item">
+                <img
+                  src="./images/5.jpg"
+                  width="370"
+                  height="294"
+                  alt="Планшет и руки на клавиатуре"
+                />
+                <div class="flexbox position-title">
+                  <h3 class="advantages-title">ДЕСКТОПНЫЕ ПРИЛОЖЕНИЯ</h3>
+                </div>
+              </div>
             </li>
+
             <li class="item">
-              <img
-                src="./images/6.jpg"
-                width="370"
-                height="294"
-                alt="В роботе за ноутбуком и телефоном"
-              />
+              <div class="position-item">
+                <img
+                  src="./images/6.jpg"
+                  width="370"
+                  height="294"
+                  alt="В роботе за ноутбуком и телефоном"
+                />
+                <div class="flexbox position-title">
+                  <h3 class="advantages-title">МОБИЛЬНЫЕ ПРИЛОЖЕНИЯ</h3>
+                </div>
+              </div>
             </li>
+
             <li class="item">
-              <img
-                src="./images/7.jpg"
-                width="370"
-                height="294"
-                alt="Робота за планшетом"
-              />
+              <div class="position-item">
+                <img
+                  src="./images/7.jpg"
+                  width="370"
+                  height="294"
+                  alt="Робота за планшетом"
+                />
+                <div class="flexbox position-title">
+                  <h3 class="advantages-title">ДИЗАЙНЕРСКИЕ РЕШЕНИЯ</h3>
+                </div>
+              </div>
             </li>
           </ul>
         </div>
@@ -411,33 +430,33 @@
           <ul class="flexbox customers-list">
             <li class="customers-item">
               <a href="" class="flexbox customers-link">
-                <svg width="45" height="50"> 
+                <svg width="45" height="50">
                   <use href="./images/svg.svg#icon-com1"></use></svg></a>
             </li>
             <li class="customers-item">
               <a href="" class="flexbox customers-link">
                 <svg width="40" height="52">
-                  <use href="./images/svg.svg#icon-com2"></use></svg              ></a>
+                  <use href="./images/svg.svg#icon-com2"></use></svg></a>
             </li>
             <li class="customers-item">
               <a href="" class="flexbox customers-link">
                 <svg width="41" height="43">
-                  <use href="./images/svg.svg#icon-com3"></use></svg              ></a>
+                  <use href="./images/svg.svg#icon-com3"></use></svg></a>
             </li>
             <li class="customers-item">
               <a href="" class="flexbox customers-link">
                 <svg width="80" height="42">
-                  <use href="./images/svg.svg#icon-com4"></use></svg              ></a>
+                  <use href="./images/svg.svg#icon-com4"></use></svg></a>
             </li>
             <li class="customers-item">
               <a href="" class="flexbox customers-link">
                 <svg width="59" height="47">
-                  <use href="./images/svg.svg#icon-com5"></use></svg              ></a>
+                  <use href="./images/svg.svg#icon-com5"></use></svg></a>
             </li>
             <li class="customers-item">
               <a href="" class="flexbox customers-link">
                 <svg width="89" height="46">
-                  <use href="./images/svg.svg#icon-com6"></use></svg              ></a>
+                  <use href="./images/svg.svg#icon-com6"></use></svg></a>
             </li>
           </ul>
         </div>
@@ -445,7 +464,7 @@
     </main>
     <!--футер-->
     <footer class="footer">
-      <div class="container flexbox ">
+      <div class="container flexbox">
         <div class="flexbox colum">
           <a href="" lang="en" class="logo">
             <span class="logo-blue">Web</span
@@ -522,5 +541,12 @@
         </div>
       </div>
     </footer>
+    <!-- модалка -->
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button data-modal-close>закрыть</button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>

@@ -376,12 +376,31 @@ img {
 /* робота */
 
 .work-list .item {
-  width: calc((100% - 30px * 2) / 3);
+    width: calc((100% - 30px * 2) / 3);
   flex-wrap: wrap;
   margin-right: 30px;
 }
 .work-list .item:nth-child(3n) {
   margin-right: 0;
+}
+
+.work-list .position-item {
+  position: relative;
+}
+
+.work-list .advantages-title {
+  color: var(--primary-white-color);
+}
+
+.work-list .position-title {
+  justify-content: center;
+  align-items: center;
+width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 70px;
+  background: rgba(47, 48, 58, 0.8);
 }
 
 /* команда */
@@ -585,6 +604,53 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1p
   color: var(--primary-text-color);
 }
 
+
+.portfolio-list .images {
+  position: relative;
+}
+
+.portfolio-list .images:hover::before, .portfolio-list .images:focus::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(33, 150, 243, 0.9);
+opacity: 1;
+}
+
+
+.portfolio-list .images-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 24px;
+  padding-right: 24px;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  font-size: 18px;
+line-height: 1.6;
+letter-spacing: 0.03em;
+color: var(--primary-white-color);
+
+margin: 0;
+width: 100%;
+height: 100%;
+/* transform: translate(-50%, -50%); */
+opacity: 0;
+/* background-color: rgba(33, 150, 243, 0.9); */
+}
+
+.portfolio-list .images-text:hover, .portfolio-list .images-text:focus {
+  opacity: 1;
+}
+
+
+
+
 /* футер */
 
 .address-text {
@@ -628,4 +694,33 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1p
 
 .footer .colum {
   margin-right: 70px;
+}
+
+/* модалка */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+
+}
+
+.modal {
+  position: absolute;
+  min-width: 528px;
+  min-height: 581px;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+background-color: var(--primary-white-color);
+
 }
